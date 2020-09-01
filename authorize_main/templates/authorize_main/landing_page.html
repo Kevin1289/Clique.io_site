@@ -1,0 +1,189 @@
+{%extends 'authorize_main/base.html'%}
+{%load static%}
+{%block content%}
+<link rel="stylesheet" href="{%static 'authorize_main/landing_page_styles.css'%}">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+{% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+        {% endfor %}
+{% endif %}
+<!-- <div class="background">
+<div class="container">
+    <div class="w">
+        <br><br><br><br><br><br><br><br>
+    <div class="Have">
+        <h1 class = "land">Have an idea?</h1>
+        <p class = "pland" style="font-size:20px;">Recruit some team members! Just fill out a simple form!</p>
+        <a class = "button" style = "color:white;" href = "#">Post Your Idea<span class = "span"></span></a>
+       
+
+        <h1 class = "land" style = "margin-top:30%">Don't have an idea?</h1>
+        <p class = "pland" style="font-size:20px;">Join a team that needs your skills! Submit your resume!</p>
+        <a class = "button JoinT" style = "color:white;" href = "#">Join a Team<span class ="span"></span></a>
+    </div>
+
+    <div class="Image">
+        <img src="{% static 'authorize_main/LandingPagePic.png' %}" alt="People Collaborating">
+    </div>
+  </div>
+</div>
+</div> -->
+
+<section id="videoSection">
+    <div id="landingPageBody"class="landingPageBody">
+    <!-- <img id='imgBg'style="background-image: linear-gradient(125deg,#1B9AAA,#06D6A0, #FFC43D);
+    background-size: 400%;
+    animation: bg 12s infinite;"> -->
+    <video id="landingVid"src="{%static 'authorize_main/landing_page_vid.mp4'%}" autoplay="" muted="" loop=""></video>
+    <div id="video-overlay" class="video-overlay"></div>
+    <img src="{%static 'authorize_main/clique_logo.png'%}" id="cliqueLogo">
+    
+</div>
+<div class="scroll-container">
+<img src="{%static 'authorize_main/scroll2.jpg'%}" id="landingpageScroll">
+</div>
+</section>
+<section>
+    <div class="circle xxlarge shade1"></div>
+    <div class="circle xlarge shade2"></div>
+    <div class="circle large shade3"></div>
+    <div class="circle medium shade4"></div>
+    <div class="circle small shade5"></div>
+    <div style="background:transparent;" id="landingPageBlock1">
+    <div id="landingText" class="landingText">
+        <h1>What we do</h1>
+        <p class="motto">You've heard of LinkedIn. You've heard of Handshake. But now there's a
+            new sheriff in town, Clique! With Clique, students are in power. We
+            have created a site where students can team up with other students
+            to work on different types of collaborations like school projects, passion projects, and so on. 
+            Everything from posting a project to applying for a project to chatting with 
+            the project leader is all possible with
+            Clique!
+        </p>
+        <p class="motto">
+            So sign up and start applying for projects today!
+        </p>
+    </div>
+    <img id="landingDoodle"src="{% static 'authorize_main/LandingPagePic.png' %}" alt="People Collaborating">
+</div>
+    
+</section>
+</div>
+<!-- <hr style="height: 0px; border: solid black; margin-left: 15px;"> -->
+<div class="founders">
+    <div>
+        <h1 class="founders-title">Founders</h1>
+        <marquee style="height:25px; color: #1B9AAA; background-color: #A8E6CE;" behavior="scroll" direction="left">Click on the individual pictures to access our LinkedIn profiles! Thank you for visiting out site!</marquee>
+
+    </div>
+        <!-- <h1 class="front">Front-End</h1> -->
+    <div class="frontEnd bcolor">
+       
+        <div class="yupeng">
+            <a class="founderTag"  target="_blank" href="https://www.linkedin.com/in/yuplu/">
+            <img class="pic" src="{% static 'authorize_main/yupeng.jpg' %}" alt="YuPeng" title="Connect with me on LinkedIn!">
+        </a>
+            <h1 class="name">Yu Peng</h1>
+            <br/>
+            <p>I am a computer science student at SUNY Stony Brook University, looking for opportunities to grow as an aspiring software engineer and as a person! <br> 
+                I'm happy to be a part of this journey with the Clique.io team and we hope our platform will help create the foundations for great ideas.</p>
+        
+        </div>
+        <div class="jie">
+            <a class="founderTag"  target="_blank" href="https://www.linkedin.com/in/jie-zhang-54a2b2160/">
+            <img class="pic" src="{% static 'authorize_main/jie.png' %}" alt="Jie">
+            </a>
+            <h1 class="name">Jie</h1>
+            <br/>
+            <p>I'm currently a sophomore student at Stony Brook University, pursuing a bachelors degree in Computer Science. I enjoy the process of making Clique.io as it provides a platform for many others to collaborate and radiate their creativity and energy and, at the same time, helps me improve as an aspring software developer.</p>
+        </div>
+        <div class="isfar">
+            <a class="founderTag"  target="_blank" href="https://www.linkedin.com/in/isfar-oshir-043403190/">
+            <img class="pic" src="{% static 'authorize_main/isfar.jpg' %}" alt="Isfar">
+            </a>
+            <h1 class="name">Isfar</h1>
+            <br/>
+            <p>I am currently a student at NYU majoring in computer science. I am passionate about technology and how it can make our lives more efficient.
+                Personally, I am interested in working in web
+                development and projects involving artificial intelligence.
+                I've loved using computers ever since I was a kid and now am 
+                grateful to work with such a great team at Clique.
+            </p>
+        </div>
+    </div>
+    <!-- <hr style="height: 100px;"> -->
+    <!-- <h1 class="back">Back-End</h1> -->
+    <!-- <br> -->
+    <div class="frontEnd bcolor2">
+        <div class="yupeng">
+            <a class="founderTag"  target="_blank" href="https://www.linkedin.com/in/jacky-chen-084a6b16b/">
+            <img class="pic" src="{% static 'authorize_main/linkedin_img.png' %}" alt="Jacky">
+            </a>
+            <h1 class="name">Jacky</h1>
+            <br/>
+            <p>I am currently a sophmore at Stony Brook University. I aspire to be a software engineer, hoping to change the world with every line of code I write. It is a sight for sore eyes to see how much Clique.io has grown since its beginning phase.</p>
+        </div>
+        <div class="jie">
+            <a class="founderTag"  target="_blank" href="https://www.linkedin.com/in/junming-qiu-32b343191/">
+            <img class="pic" src="{% static 'authorize_main/junming.jpg' %}" alt="Junming">
+            </a>
+            <h1 class="name">Junming</h1>
+            <br/>
+            <p>I am an aspiring Computer Science at NYU student minoring in Cyber Security who loves the process of creation. From this love, I recognize that it takes major effort and dedication to fulfill any great idea. My goal is that this web service will allow others to achieve their goals.</p>
+        </div>
+        <div class="isfar">
+            <a class="founderTag"  target="_blank" href="https://www.linkedin.com/in/shi-xin-wu-6b178719b/">
+            <img class="pic" src="{% static 'authorize_main/kevin.jpg' %}" alt="Kevin">
+            </a>
+            <h1 class="name">Kevin</h1>
+            <br/>
+            <p>As a student at NYU studying Computer Science with a minor in Cyber Security, I strive to craft my own path throught persistance and dedication. Although finding fruitful opportunities can be challenging, I want to make this process more promising and enjoyable for my fellow peers.</p>
+        </div>
+    </div>
+
+    <div id="footer-top">
+        <div class="social">
+        <a target="_blank" href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a target="_blank" href="https://twitter.com/explore" class="fa fa-twitter"></a>
+        <a target="_blank" href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+        </div>
+        <h1 id="footer-text">&copy; 2020 Clique, Inc. and the Clique logo are trademarks of Clique, Inc.  </h1>
+        <img src="{%static 'authorize_main/clique_logo.png'%}" id="minilogo">
+    </div>
+</div>
+
+<!-- <div id="footer-top">
+    <h1>hey</h1>
+</div> -->
+
+
+<script type="text/javascript">
+    let videoOverlay=document.getElementById("video-overlay");
+    let block1=document.getElementById('landingPageBlock1');
+    let image=document.getElementById('cliqueLogo');
+    let video=document.getElementById('landingVid');
+    let downarrow=document.getElementById('landingpageScroll')
+    
+   
+    window.addEventListener('scroll',function(){
+        let value=1+window.scrollY/-400;
+        image.style.opacity=value;
+        video.style.opacity=value;
+        downarrow.style.opacity=value;
+        if(video.style.opacity<0.8){
+        videoOverlay.style.opacity=0;
+    }
+    else{
+        videoOverlay.style.opacity=.15;
+    }
+    });
+    window.addEventListener('scroll',function(){
+        let value=0+(window.scrollY-100)/500;
+        block1.style.opacity=value;
+    });
+   
+    
+</script>
+{% endblock %}
